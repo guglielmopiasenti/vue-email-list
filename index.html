@@ -20,10 +20,13 @@
     <!-- javascript -->
     <script defer src="script.js"></script>
   </head>
-  <body>
-    <div v-if="mails">
-      <ul>
-        {{mails}}
+  <!-- vue root -->
+  <body id="root">
+    <div v-if="emails" class="container">
+      <h1 class="text-center">EMAILS:</h1>
+      <ul class="card p-5 m-5">
+        <!-- emails printed from endpoint -->
+        <li class="d-flex flex-column">{{emails}}</li>
       </ul>
     </div>
     <h5 v-else>Loading emails</h5>
